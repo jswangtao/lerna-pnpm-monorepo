@@ -1,6 +1,12 @@
+/*
+ * @Author: wangtao
+ * @Date: 2022-10-07 14:46:59
+ * @LastEditors: 汪滔
+ * @LastEditTime: 2022-10-07 15:03:03
+ * @Description: file content
+ */
 module.exports = {
-  // 采用 cz 自定义的提交规范, > .cz-config.js
-  extends: ["cz"],
+  extends: ["@commitlint/config-conventional"],
   rules: {
     // 自定义规则
   }
