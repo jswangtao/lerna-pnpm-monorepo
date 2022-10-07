@@ -11,6 +11,11 @@
     "add": "git add .",
     "commit": "git-cz"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "config": {
     "commitizen": {
       "path": "cz-customizable"
