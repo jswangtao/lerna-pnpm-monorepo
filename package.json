@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky install",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "add-commit": "npm run add && npm run commit",
     "add": "git add .",
     "commit": "git-cz"
   },
@@ -14,14 +17,20 @@
     }
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.1.0",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "commitizen": "^4.2.5",
+    "commitlint": "^17.1.2",
+    "commitlint-config-cz": "^0.13.3",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
     "lerna": "^5.5.4",
-    "prettier": "^2.7.1"
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
   }
 }
