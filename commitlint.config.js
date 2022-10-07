@@ -19,18 +19,24 @@ const scopes = [
 module.exports = {
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
+
+    // [2, "always", scopes]
+    // level 校验等级 0 禁用 1 警告 2 错误
+    // applicable 规则匹配模式   always 正匹配  nerver 反匹配
+    // value 参数值
+
     /**
      * type[scope]: [function] description
      *      ^^^^^
      */
-    "scope-enum": [2, "always", scopes],
+    "scope-enum": [2, "always", scopes], //scope 可选值
     /**
      * type[scope]: [function] description
      *
      * ^^^^^^^^^^^^^^ empty line.
      * - Something here
      */
-    "body-leading-blank": [1, "always"],
+    "body-leading-blank": [1, "always"], //body 开头空行
     /**
      * type[scope]: [function] description
      *
@@ -38,22 +44,23 @@ module.exports = {
      *
      * ^^^^^^^^^^^^^^
      */
-    "footer-leading-blank": [1, "always"],
+    "footer-leading-blank": [1, "always"], //footer 开头空行
     /**
      * type[scope]: [function] description [No more than 72 characters]
      *      ^^^^^
      */
-    "header-max-length": [2, "always", 72],
-    "scope-case": [2, "always", "lower-case"],
-    "subject-case": [1, "never", ["sentence-case", "start-case", "pascal-case", "upper-case"]],
-    "subject-empty": [2, "never"],
-    "subject-full-stop": [2, "never", "."],
-    "type-case": [2, "always", "lower-case"],
-    "type-empty": [2, "never"],
+    "header-max-length": [2, "always", 72], //header 最大长度
+    "scope-case": [2, "always", "lower-case"], //scope 单词格式
+    "subject-case": [1, "never", ["sentence-case", "start-case", "pascal-case", "upper-case"]], //subject 单词格式
+    "subject-empty": [2, "never"], //subject 是否为空
+    "subject-full-stop": [2, "never", "."], //subject 中止符
+    "type-case": [2, "always", "lower-case"], //type 单词格式
+    "type-empty": [2, "never"], //type是否为空
     /**
      * type[scope]: [function] description
      * ^^^^
      */
+    // type 可选值 例如: [ 'feat', 'fix' ]
     "type-enum": [
       2,
       "always",
